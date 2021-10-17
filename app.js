@@ -6,6 +6,8 @@ app.use(express.json());
 
 app.use('/api', router);
 
+// advanced: вынести обработчик ошибок в миддлвар
+// и добавить обработчик монгусовских ошибок
 app.use((err, req, res, next) => {
   if (res.headersSent) {
     return;
