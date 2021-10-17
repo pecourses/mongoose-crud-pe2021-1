@@ -1,6 +1,6 @@
-const { Schema } = require('mongoose');
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
 const { EMAIL_VALIDATION_SCHEMA } = require('./../utils/validationSchemas');
-// firstName, lastName, email, gender, birthday, isMerried, workExp
 
 const userSchema = new Schema({
   firstName: {
@@ -39,3 +39,7 @@ const userSchema = new Schema({
     min: 0,
   },
 });
+
+const User = mongoose.model('users', userSchema);
+
+module.exports = User;

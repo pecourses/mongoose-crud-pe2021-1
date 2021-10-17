@@ -1,5 +1,5 @@
 module.exports.createUser = async (req, res, next) => {
-  console.log(`Ok`);
+  // создание юзера
 };
 
 module.exports.getUsers = async (req, res, next) => {
