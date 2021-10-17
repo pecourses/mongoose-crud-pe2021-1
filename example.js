@@ -20,6 +20,7 @@ const Task = mongoose.model('tasks', taskSchema);
   //create
   const newTask = {
     value: 'Relax',
+    date: '2021-10-17',
     user_id: mongoose.Types.ObjectId('616adec08a81664fabb515e6'),
   };
   const newTaskInstance = new Task(newTask);
