@@ -4,7 +4,7 @@ Content-Type: application/json
 {
     "firstName": "Mongoose Name 1",
     "lastName": "Mongoose Lastname 1",
-    "email": "memail1@gmail.com",
+    "email": "email1@gmail.com",
     "birthday": "1990-10-10",
     "workExperience": 10
 }
@@ -15,16 +15,31 @@ GET http://127.0.0.1:5000/api/users HTTP/1.1
 
 ###
 
-GET http://127.0.0.1:5000/api/users/616c393e75e58ec100f1a749 HTTP/1.1
+GET http://127.0.0.1:5000/api/users/6180fb188a4358d038a36a45 HTTP/1.1
 
 ###
-PATCH http://127.0.0.1:5000/api/users/616c393e75e58ec100f1a749 HTTP/1.1
+
+PATCH http://127.0.0.1:5000/api/users/6180fb188a4358d038a36a45 HTTP/1.1
 Content-Type: application/json
 
 {
-    "workExp": 8,
+    "workExperience": 8,
     "isMarried": false   
 }
 
 ###
-DELETE http://127.0.0.1:5000/api/users/616c393e75e58ec100f1a749 HTTP/1.1
+
+DELETE http://127.0.0.1:5000/api/users/6180fb188a4358d038a36a45 HTTP/1.1
+
+###
+
+POST http://127.0.0.1:5000/api/users/6180fb188a4358d038a36a45/posts HTTP/1.1
+Content-Type: application/json
+
+{
+    "body": "Hello"   
+}
+
+###
+
+GET http://127.0.0.1:5000/api/users/6180fb188a4358d038a36a45/posts HTTP/1.1
