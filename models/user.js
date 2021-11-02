@@ -17,7 +17,7 @@ const userSchema = new Schema({
     validate: {
       validator: value => EMAIL_VALIDATION_SCHEMA.isValidSync(value),
     },
-    //unique: true,
+    unique: true,
   },
   gender: {
     type: String,
@@ -40,6 +40,6 @@ const userSchema = new Schema({
   },
 });
 
-const User = mongoose.model('users', userSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = User;
